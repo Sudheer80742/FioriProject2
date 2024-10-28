@@ -1,0 +1,10 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<List items="{/Names}">
+<items>
+<StandardListItem title="{name}" description="{id}" press="onStandardListItemPress" type="Navigation"/>
+</items>
+</List>
+</c:FragmentDefinition>

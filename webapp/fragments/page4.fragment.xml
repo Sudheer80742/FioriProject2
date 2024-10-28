@@ -1,0 +1,85 @@
+<c:FragmentDefinition
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+>
+    <IconTabBar
+        id="idIconTabBarMulti"
+        expanded="{device>/isNoPhone}"
+        class="sapUiResponsiveContentPadding"
+    >
+        <items>
+            <IconTabFilter
+                icon="sap-icon://hint"
+                key="info"
+                id="idsimpleform"
+            >
+                <form:SimpleForm >
+                    <Label text="Name" />
+                    <Text
+                        id="text1"
+                        text="{name}"
+                    />
+                    <Label text="Id" />
+                    <Text
+                        id="text2"
+                        text="{id}"
+                    />
+                </form:SimpleForm>
+                <Table items="{parentDetails}">
+                    <columns>
+                        <Column>
+                            <Text text="Parent Name"/>
+                        </Column>
+                        <Column>
+                            <Text text="Age"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{Parentname}"/>
+                                <Text text="{age}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </IconTabFilter>
+            <IconTabFilter
+                icon="sap-icon://attachment"
+                key="attachments"
+            >
+                <form:SimpleForm id="idSimpleForm1">
+                    <form:content>
+                        <Label text="id" />
+                        <Input
+                            id="id1"
+                            type="Number"
+                        />
+                        <Label text="name" />
+                        <Input id="name1" />
+                    </form:content>
+                </form:SimpleForm>
+                <Toolbar>
+                    <ToolbarSpacer />
+                    <Button
+                        text="Add"
+                        press="onAdding"
+                    />
+                </Toolbar>
+            </IconTabFilter>
+            <IconTabFilter
+                icon="sap-icon://notes"
+                key="notes"
+            >
+                <Text text="Notes go here ..." />
+            </IconTabFilter>
+            <IconTabFilter
+                icon="sap-icon://group"
+                key="people"
+            >
+                <Text text="People content goes here ..." />
+            </IconTabFilter>
+        </items>
+    </IconTabBar>
+</c:FragmentDefinition>

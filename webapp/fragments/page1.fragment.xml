@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<Page>
+ <DatePicker id="startDate" />
+<DatePicker id="endDate" />
+<Select
+                id="nameSelect"
+                change="onSelectChange"
+                items="{/data}">
+                <items>
+                    <core:Item
+                        key="{key}"
+                        text="{value}"
+                    />
+                </items>
+            </Select>
+            <Button text="Difference" press="onDiff"/>
+             <Button press="onNav2" text="Page2"/>
+</Page>
+</core:FragmentDefinition>
