@@ -7,7 +7,7 @@
 	displayBlock="true"
 	height="100%"
 >
-  <FlexibleColumnLayout id="1" layout="TwoColumnsMidExpanded">
+  <FlexibleColumnLayout id="1" layout="OneColumn">
         <beginColumnPages>
                         <core:Fragment
                             fragmentName="project2.fragments.page3"
@@ -20,5 +20,14 @@
                             type="XML"
                         />
         </midColumnPages>
+        <endColumnPages>
+        <m:Page>
+        <m:Toolbar>
+        <m:ToolbarSpacer/>
+        <m:Button id="33" press="close" icon="sap-icon://decline"/>
+        </m:Toolbar>
+            <core:Fragment fragmentName="project2.fragments.page5" type="XML"/>
+            </m:Page>
+        </endColumnPages>
     </FlexibleColumnLayout>
 </mvc:View>

@@ -3,6 +3,10 @@
     xmlns="sap.m"
     xmlns:c="sap.ui.core"
 >
+<Page>
+ <Toolbar >
+             <Button id="22" press="close" text="decline"/>
+            </Toolbar>
     <IconTabBar
         id="idIconTabBarMulti"
         expanded="{device>/isNoPhone}"
@@ -14,6 +18,7 @@
                 key="info"
                 id="idsimpleform"
             >
+           
                 <form:SimpleForm >
                     <Label text="Name" />
                     <Text
@@ -27,6 +32,12 @@
                     />
                 </form:SimpleForm>
                 <Table items="{parentDetails}">
+                    <headerToolbar>
+                        <Toolbar >
+                            <ToolbarSpacer />
+                            <Button press="onTabAdd" icon="sap-icon://add"/>
+                        </Toolbar>
+                    </headerToolbar>
                     <columns>
                         <Column>
                             <Text text="Parent Name"/>
@@ -82,4 +93,10 @@
             </IconTabFilter>
         </items>
     </IconTabBar>
+    <OverflowToolbar >
+    <Button press="onButtonPress1" type="Accept" text="Approve"/>
+    <Button press="onButtonPress2" type="Reject" text="Reject"/>
+    </OverflowToolbar>
+    </Page>
+   
 </c:FragmentDefinition>

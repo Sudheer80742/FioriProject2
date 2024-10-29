@@ -1,0 +1,27 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Table items="{/Names}">
+<columns>
+<Column >
+<Text text="Id"/>
+</Column>
+<Column >
+<Text text="Name"/>
+</Column>
+<Column >
+<Text text="Status"/>
+</Column>
+</columns>
+<items>
+<ColumnListItem >
+<cells>
+<Text text="{id}"/>
+<Text text="{name}"/>
+<Text text="{Status}"/>
+</cells>
+</ColumnListItem>
+</items>
+</Table>
+</c:FragmentDefinition>
