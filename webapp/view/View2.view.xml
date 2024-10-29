@@ -1,32 +1,43 @@
 <mvc:View
-	controllerName="project2.controller.View2"
-	xmlns:mvc="sap.ui.core.mvc"
+    controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.f"
-	xmlns:m="sap.m"
-	xmlns:core="sap.ui.core"
-	displayBlock="true"
-	height="100%"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    id="View2"
 >
-  <FlexibleColumnLayout id="1" layout="OneColumn">
+    <FlexibleColumnLayout
+        id="1"
+        layout="OneColumn"
+    >
         <beginColumnPages>
-                        <core:Fragment
-                            fragmentName="project2.fragments.page3"
-                            type="XML"
-                        />
+            <core:Fragment
+                fragmentName="project2.fragments.page3"
+                type="XML"
+            />
         </beginColumnPages>
         <midColumnPages>
             <core:Fragment
-                            fragmentName="project2.fragments.page4"
-                            type="XML"
-                        />
+                fragmentName="project2.fragments.page4"
+                type="XML"
+            />
         </midColumnPages>
         <endColumnPages>
-        <m:Page>
-        <m:Toolbar>
-        <m:ToolbarSpacer/>
-        <m:Button id="33" press="close" icon="sap-icon://decline"/>
-        </m:Toolbar>
-            <core:Fragment fragmentName="project2.fragments.page5" type="XML"/>
+            <m:Page>
+                <m:Toolbar>
+                    <m:ToolbarSpacer />
+                    <m:Button
+                        id="33"
+                        press="close"
+                        icon="sap-icon://decline"
+                    />
+                </m:Toolbar>
+                <core:Fragment
+                    fragmentName="project2.fragments.page5"
+                    type="XML"
+                />
             </m:Page>
         </endColumnPages>
     </FlexibleColumnLayout>
